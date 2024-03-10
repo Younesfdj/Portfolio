@@ -37,3 +37,4 @@ next-env.d.ts
 
 # personal data file
 data.ts
+.vercel

@@ -1,6 +1,6 @@
 import { Outfit } from "next/font/google"
 import { ArrowRight } from "lucide-react"
-import { technologies } from "@/pages/data"
+import { technologies } from "@/data"
 const outfit = Outfit({
     subsets: ["latin"],
 })

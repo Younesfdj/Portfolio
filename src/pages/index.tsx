@@ -5,8 +5,8 @@ import TechnologiesSection from "@/components/Technologies";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import CommunitySection from "@/components/CommunitySection";
 
-import { products } from "./data";
-import { navitems } from "./data";
+import { products } from "../data";
+import { navitems } from "../data";
 
 
 

@@ -3,8 +3,8 @@ import { ArrowUpRight, ChevronRight } from "lucide-react"
 import Image from "next/image";
 import { Outfit } from "next/font/google"
 import Link from "next/link";
-import { workData } from "@/pages/data"
-import { WorkExperience } from "@/pages/types"
+import { workData } from "@/data"
+import { WorkExperience } from "@/types"
 
 const outfit = Outfit({
     subsets: ["latin"],

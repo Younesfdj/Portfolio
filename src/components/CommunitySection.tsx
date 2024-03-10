@@ -1,6 +1,6 @@
 import SparklesPreview from "@/components/SparklesPreview";
 import Image from "next/image";
-import { communityData } from "@/pages/data";
+import { communityData } from "@/data";
 
 export default function CommunitySection() {
     return (
