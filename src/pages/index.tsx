@@ -3,7 +3,7 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import WorkExperienceSection from "@/components/WorkExperienceSection";
 import TechnologiesSection from "@/components/Technologies";
 import { HeroParallax } from "@/components/ui/hero-parallax";
-import SparklesPreview from "@/components/SparklesPreview";
+import CommunitySection from "@/components/CommunitySection";
 
 import { products } from "./data";
 import { navitems } from "./data";
@@ -26,7 +26,7 @@ export default function Home() {
       <WorkExperienceSection />
       <TechnologiesSection />
       <HeroParallax products={products} />
-      <SparklesPreview />
+      <CommunitySection />
     </div>
 
   );

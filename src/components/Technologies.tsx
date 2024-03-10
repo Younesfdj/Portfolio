@@ -1,19 +1,12 @@
 import { Outfit } from "next/font/google"
 import { ArrowRight } from "lucide-react"
+import { technologies } from "@/pages/data"
 const outfit = Outfit({
     subsets: ["latin"],
 })
 
 export default function TechnologiesSection() {
-    const technologies = [
-        "React, Next.js", "HTML, JS, TS",
-        "CSS (Tailwind, Bootstrap)",
-        "SQL, MongoDB",
-        "Node, Express",
-        "Mongoose, Prisma",
-        "Docker",
-        "GoLang (Learning)",
-    ]
+
     return (
         <div className={`${outfit.className} h-auto bg-dark-black p-10 mx-auto mt-6 rounded-xl max-w-5xl flex flex-col gap-8`}>
             <header className="flex flex-col gap-4">
