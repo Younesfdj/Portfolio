@@ -5,7 +5,7 @@ import TechnologiesSection from "@/components/Technologies";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import CommunitySection from "@/components/CommunitySection";
 
-import { products } from "../data";
+import { projects } from "../data";
 import { navitems } from "../data";
 
 
@@ -17,7 +17,6 @@ const poppins = Poppins({
 })
 
 export default function Home() {
-  console.log(products);
 
   return (
     <div className={`${poppins.className} bg-black`}>
@@ -25,7 +24,7 @@ export default function Home() {
       <HomePage />
       <WorkExperienceSection />
       <TechnologiesSection />
-      <HeroParallax products={products} />
+      <HeroParallax projects={projects} />
       <CommunitySection />
     </div>
 

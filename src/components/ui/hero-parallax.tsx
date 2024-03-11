@@ -11,17 +11,17 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 export const HeroParallax = ({
-    products,
+    projects,
 }: {
-    products: {
+    projects: {
         title: string;
         link: string;
         thumbnail: StaticImageData;
     }[];
 }) => {
-    const firstRow = products.slice(0, 5);
-    const secondRow = products.slice(5, 10);
-    const thirdRow = products.slice(10, 15);
+    const firstRow = projects.slice(0, 5);
+    const secondRow = projects.slice(5, 10);
+    const thirdRow = projects.slice(10, 15);
     const ref = React.useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
