@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
- 
+
 const svgToDataUri = require("mini-svg-data-uri");
- 
+
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
@@ -15,8 +15,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors:{
-        "dark-black":"#1e1e21",
+      colors: {
+        "dark-black": "#1e1e21",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -26,7 +26,8 @@ const config: Config = {
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shimmer: "shimmer 2s linear infinite",
-
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         spotlight: {
@@ -45,6 +46,11 @@ const config: Config = {
           },
           to: {
             backgroundPosition: "-200% 0",
+          },
+        },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
           },
         },
       },
@@ -66,17 +72,15 @@ const config: Config = {
     },
   ],
 };
- 
+
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
-};
+}
 export default config;
-
-      

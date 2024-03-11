@@ -8,7 +8,7 @@ import CommunitySection from "@/components/CommunitySection";
 import { projects } from "../data";
 import { navitems } from "../data";
 
-
+import FeedbackSection from "@/components/FeedbackSection";
 
 import { Poppins } from "next/font/google"
 const poppins = Poppins({
@@ -26,6 +26,7 @@ export default function Home() {
       <TechnologiesSection />
       <HeroParallax projects={projects} />
       <CommunitySection />
+      <FeedbackSection />
     </div>
 
   );
