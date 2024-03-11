@@ -28,6 +28,5 @@ export default function Home() {
       <CommunitySection />
       <FeedbackSection />
     </div>
-
   );
 }
