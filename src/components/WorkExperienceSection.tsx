@@ -14,7 +14,7 @@ export default function WorkExperienceSection() {
 
     const work: WorkExperience[] = workData
     return (
-        <TracingBeam className={`${outfit.className} h-auto bg-dark-black p-10 rounded-xl max-w-5xl`}>
+        <TracingBeam className={`${outfit.className} h-auto bg-dark-black p-10 rounded-xl max-w-5xl text-white`}>
             <div className=" flex flex-col gap-10">
                 <header className=" text-4xl font-bold">Worked As,</header>
                 {

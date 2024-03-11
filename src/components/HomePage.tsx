@@ -4,10 +4,10 @@ import HomeWrapper from "@/components/HomeWrapper";
 export default function HomePage() {
     return (
         <HomeWrapper>
-            <div className={`h-screen flex items-center justify-center`}>
+            <div className={`h-screen flex items-center justify-center text-white`}>
                 <Spotlight />
                 <div className="flex items-center p-[1.7rem] pt-2 flex-col text-center h-3/4">
-                    <h1 className="text-[5.4rem] font-bold flex flex-col">
+                    <h1 className="text-[5.4rem] font-bold flex flex-col ">
                         Hi, Younes here
                         <br />
                         a web developer.

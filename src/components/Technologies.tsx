@@ -8,7 +8,7 @@ const outfit = Outfit({
 export default function TechnologiesSection() {
 
     return (
-        <div className={`${outfit.className} h-auto bg-dark-black p-10 mx-auto mt-6 rounded-xl max-w-5xl flex flex-col gap-8`}>
+        <div className={`${outfit.className} h-auto bg-dark-black p-10 mx-auto mt-6 rounded-xl max-w-5xl flex flex-col gap-8 text-white`}>
             <header className="flex flex-col gap-4">
                 <p className=" text-4xl font-bold">I build with,</p>
                 <p className=" text-gray-400 text-[1.1rem]">I constantly learn new and exciting concepts in computer science and web development. I try applying these concepts to solve real-world problems. A few technologies I enjoy working with:</p>

@@ -31,7 +31,7 @@ export const HeroParallax = ({
     const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
     const translateX = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, 2000]),
+        useTransform(scrollYProgress, [0, 1], [0, 1500]),
         springConfig
     );
     const translateXReverse = useSpring(
@@ -104,10 +104,10 @@ export const HeroParallax = ({
 export const Header = () => {
     return (
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-            <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+            <h1 className="text-2xl md:text-7xl font-bold text-white">
                 I've made <br /> Some cool projects
             </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+            <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
                 With React, Next.js, TailwindCSS and more. The backend ranges from Node, Express, MongoDB, Prisma and more.
             </p>
         </div>

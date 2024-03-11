@@ -20,7 +20,7 @@ export default function Home() {
   console.log(products);
 
   return (
-    <div className={`${poppins.className} `}>
+    <div className={`${poppins.className} bg-black`}>
       <FloatingNav navItems={navitems} />
       <HomePage />
       <WorkExperienceSection />
