@@ -19,7 +19,7 @@ const poppins = Poppins({
 export default function Home() {
 
   return (
-    <div className={`${poppins.className} bg-black`}>
+    <div className={`${poppins.className} bg-black overflow-hidden`}>
       <FloatingNav navItems={navitems} />
       <HomePage />
       <WorkExperienceSection />

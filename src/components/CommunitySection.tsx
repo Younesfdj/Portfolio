@@ -4,10 +4,10 @@ import { communityData } from "@/data";
 
 export default function CommunitySection() {
     return (
-        <div className=" flex flex-col items-center gap-20 py-9">
+        <div className=" flex flex-col items-center gap-20 py-3 lg:py-9">
             <SparklesPreview />
-            <div className="w-full px-44">
-                <div className="grid grid-cols-3 w-auto h-auto gap-5">
+            <div className="w-full flex items-center justify-center">
+                <div className="grid grid-cols-1 lg:grid-cols-3 w-auto h-auto gap-7">
                     {
                         communityData.map((data, index) => {
                             return (
