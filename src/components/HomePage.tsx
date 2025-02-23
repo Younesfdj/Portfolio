@@ -1,18 +1,21 @@
 import { Spotlight } from "@/components/ui/Spotlight";
 import HomeWrapper from "@/components/HomeWrapper";
+import { useTranslations } from "use-intl";
+
+const handleDownload = async () => {
+  const res = await fetch("/api/file");
+  const blob = await res.blob();
+  const url = window.URL.createObjectURL(new Blob([blob]));
+  const link = document.createElement("a");
+  link.href = url;
+  link.setAttribute("download", "CV_YOUNES.pdf");
+  document.body.appendChild(link);
+  link.click();
+  link?.parentNode?.removeChild(link);
+};
 
 export default function HomePage() {
-  const handleDownload = async () => {
-    const res = await fetch("/api/file");
-    const blob = await res.blob();
-    const url = window.URL.createObjectURL(new Blob([blob]));
-    const link = document.createElement("a");
-    link.href = url;
-    link.setAttribute("download", "CV_YOUNES.pdf");
-    document.body.appendChild(link);
-    link.click();
-    link?.parentNode?.removeChild(link);
-  };
+  const t = useTranslations("Home");
   return (
     <HomeWrapper>
       <div className={`h-screen flex items-center justify-center text-white`}>

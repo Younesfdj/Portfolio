@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
-import nextTranslate from "next-translate-plugin";
-
 const nextConfig = {
-  ...nextTranslate(),
+  reactStrictMode: true,
+  i18n: {
+    locales: ["en", "fr"],
+    defaultLocale: "en",
+  },
 };
 
 export default nextConfig;

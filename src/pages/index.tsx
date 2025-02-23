@@ -9,15 +9,14 @@ import { projects } from "../data";
 import { navitems } from "../data";
 
 import FeedbackSection from "@/components/FeedbackSection";
+import { Poppins } from "next/font/google";
 
-import { Poppins } from "next/font/google"
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500"]
-})
+  weight: ["400", "500"],
+});
 
 export default function Home() {
-
   return (
     <div className={`${poppins.className} bg-black overflow-hidden`}>
       <FloatingNav navItems={navitems} />
@@ -29,4 +28,24 @@ export default function Home() {
       <FeedbackSection />
     </div>
   );
+}
+
+interface StaticPropsContext {
+  locale: string;
+}
+
+interface StaticProps {
+  props: {
+    messages: Record<string, string>;
+  };
+}
+
+export async function getStaticProps(
+  context: StaticPropsContext
+): Promise<StaticProps> {
+  return {
+    props: {
+      messages: (await import(`../../locales/${context.locale}.json`)).default,
+    },
+  };
 }
